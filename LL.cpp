@@ -12,6 +12,8 @@ void LL::push() {
 // this function creates a new Node, then adds the node to the end of the list and updates //the last pointer.
 //Note: you’ll want to check to see if this is the very first node being added to the list, //in which case you’ll want to
 //create the new node, and then make sure that both the first //and the last pointer point to it.
+	
+    //I started to do push, this is basically just from the powerpoint and I'm not 100% sure I put it down here correctly
     Node *n = new Node;
     if(first == NULL) {
         first = n;
