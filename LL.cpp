@@ -22,7 +22,7 @@ void LL::push() {
         first = n;
     }
 }
-void LL::delete(int i) {
+void LL::removekth(int i) {
 // this method starts at the first node in the list and counts to i-1. It then deletes the //node at location i. Note that
 //you must make node at i-1 point to node at i+1, and you //must decrease the size of the list. If you are deleting the
 //0th element, you must first //set first to the node at 2 before deleting node 1. Equally, if you are deleting the last

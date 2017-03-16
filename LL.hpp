@@ -9,7 +9,7 @@ class LL {
 public:
  LL(); //constructor
  void push(); //adds new node to end of list
- void delete(int i); // removes the ith node from the list
+ void removekth(int i); // removes the ith node from the list
  void printList(); // prints out the entire list
 };
 #endif /* LL_HPP_ */
