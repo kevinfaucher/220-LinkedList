@@ -28,6 +28,42 @@ void LL::removekth(int i) {
 //0th element, you must first //set first to the node at 2 before deleting node 1. Equally, if you are deleting the last
 //node, you must make the new last node be the node at i-1.
 //You must delete your node at i.
+	if(currsize == 0){
+		cout << "List is empty" << endl;
+		return;
+	}//if
+	if(i >= currsize){
+		cout << "Out of scope" << endl;
+		return;
+	}//if
+	Node *tmp = first;
+	if(i == 0 && currsize == 1){
+		delete first;
+		first = NULL;
+		last = NULL;
+		currsize = 0;
+		return;
+	}//if
+	else if(i == 0){
+		first = first->next;
+		delete tmp;
+		currsize--;
+		return;
+	}//else if
+	for(int j = 0; j < i-1; j++){
+		tmp = tmp->next;
+	}//for
+	Node *tmpDelete = tmp->next;
+	tmp->next = tmp->next->next;
+	delete tmpDelete;
+	currsize--;
+	if(i == currsize && tmp->next != NULL){
+		last = tmp->next;
+	}//if
+	else if(i == currsize && tmp->next == NULL){
+		last = tmp;
+	}//else if
+}//removekth
 }
 
 void LL::printList() {
